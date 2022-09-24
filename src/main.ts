@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
-import chalk from "chalk";
-import clear from "clear";
-import figlet from "figlet";
-import * as path from "path"
-import commander from 'commander'
+import { Command } from "commander";
+import lint from "./lint";
 
-const program = commander;
+const program = new Command();
 
-clear();
-console.log(
-  chalk.red(
-    figlet.textSync('pizza-cli', { horizontalLayout: 'full' })
-  )
-);
+program
+  .version("1.0.0")
+  .description("Supress all your eslint problems")
+  .command('[files]')
+  .usage("[files]")
+  .action((a, {args})=> lint(args))
+  .parse(process.argv);
+
+

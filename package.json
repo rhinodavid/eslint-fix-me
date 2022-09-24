@@ -7,14 +7,19 @@
     "chalk": "4.1.2",
     "clear": "^0.1.0",
     "commander": "^9.4.0",
+    "eslint": "^8.24.0",
     "figlet": "^1.5.2",
     "path": "^0.12.7"
   },
   "description": "Disable eslint line-by-line after migrating to eslint",
   "devDependencies": {
     "@types/clear": "^0.1.2",
+    "@types/eslint": "^8.4.6",
     "@types/figlet": "^1.5.5",
     "@types/node": "^18.7.19",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint-config-prettier": "^8.5.0",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.3"
