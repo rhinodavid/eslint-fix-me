@@ -1,7 +1,7 @@
 {
   "author": "David Walsh <5778036+rhinodavid@users.noreply.github.com>",
   "bin": {
-    "eslint-fix-me'": "./out/main.js"
+    "eslint-fix-me": "./out/main.js"
   },
   "dependencies": {
     "chalk": "4.1.2",
@@ -12,6 +12,8 @@
   },
   "description": "Disable eslint line-by-line after migrating to eslint",
   "devDependencies": {
+    "@types/clear": "^0.1.2",
+    "@types/figlet": "^1.5.5",
     "@types/node": "^18.7.19",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
@@ -23,11 +25,7 @@
   "private": false,
   "scripts": {
     "build": "tsc -p .",
-    "create": "npm run build && npm run test",
-    "local": "sudo npm i -g && pizza",
-    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "start:windows": "nodemon --watch 'src/**/*.ts' --exec \"npx ts-node\" src/index.ts"
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/main.ts"
   },
   "version": "1.0.0"
 }
