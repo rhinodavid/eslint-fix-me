@@ -29,3 +29,8 @@ A safer way is to run `eslint-fix-me` on the code. In one PR you can migrate to 
 and errors suppressed. Then, in subsequent PRs, you can take you time to address each
 `$eslint-fix-me` comment carefully, all while maintaining ESLint coverage on any new code being
 committed.
+
+## Alternatives
+
+[**eslint-fix-later**](https://github.com/salimkayabasi/eslint-fix-later): More mature, but disables ESLint
+for the entire file that contains the warning or error
