@@ -4,11 +4,8 @@
     "eslint-fix-me": "./out/main.js"
   },
   "dependencies": {
-    "chalk": "4.1.2",
-    "clear": "^0.1.0",
     "commander": "^9.4.0",
     "eslint": "^8.24.0",
-    "figlet": "^1.5.2",
     "graceful-fs": "^4.2.10"
   },
   "description": "Disable eslint line-by-line after migrating to eslint",
@@ -31,7 +28,8 @@
   "private": false,
   "scripts": {
     "build": "tsc -p .",
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/main.ts"
+    "start": "node --loader ts-node/esm src/main.ts",
+    "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/main.ts"
   },
   "version": "1.0.0"
 }
