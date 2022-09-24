@@ -45,7 +45,7 @@ export default async function lint(files: string[]) {
       const lines = file.split(os.EOL);
       messagesForLine.forEach((ruleIds, lineNumber) => {
         // LineNumber is ONE (1) based
-        const commentLine0 = `// $eslint-fix-me https://github.com/rhinodavid/eslint-fix-me`;
+        const commentLine0 = `// $eslint-fix-me github.com/rhinodavid/eslint-fix-me`;
         const commentLine1 = `// eslint-disable-next-line ${ruleIds.join(",")}`
 
         const lineIndex = lineNumber - 1;

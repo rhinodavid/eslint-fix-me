@@ -3,7 +3,7 @@
 `eslint-fix-me` runs [`eslint`](https://eslint.org/) on your files and creates
 comments to disable ESLint warnings or errors it encounters.
 
-## `// $eslint-fix-me https://github.com/rhinodavid/eslint-fix-me`
+## `// $eslint-fix-me github.com/rhinodavid/eslint-fix-me`
 
 Do you see this line in your code? That means someone has used this tool
 to suppress ESLint errors and warnings, most likely after the codebase
