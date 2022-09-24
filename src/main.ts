@@ -10,7 +10,7 @@ program
   .description("Supress all your eslint problems")
   .command('[files]')
   .usage("[files]")
-  .action((a, {args})=> lint(args))
+  .action((_, {args: files})=> lint(files))
   .parse(process.argv);
 
 

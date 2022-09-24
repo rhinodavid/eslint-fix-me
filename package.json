@@ -9,13 +9,14 @@
     "commander": "^9.4.0",
     "eslint": "^8.24.0",
     "figlet": "^1.5.2",
-    "path": "^0.12.7"
+    "graceful-fs": "^4.2.10"
   },
   "description": "Disable eslint line-by-line after migrating to eslint",
   "devDependencies": {
     "@types/clear": "^0.1.2",
     "@types/eslint": "^8.4.6",
     "@types/figlet": "^1.5.5",
+    "@types/graceful-fs": "^4.1.5",
     "@types/node": "^18.7.19",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
