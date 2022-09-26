@@ -45,12 +45,15 @@ export default async function lint(files: string[]) {
       const lines = file.split(os.EOL);
       messagesForLine.forEach((ruleIds, lineNumber) => {
         // LineNumber is ONE (1) based
-        const commentLine0 = `// $eslint-fix-me github.com/rhinodavid/eslint-fix-me`;
-        const commentLine1 = `// eslint-disable-next-line ${ruleIds.join(",")}`
+        const comment = `// $eslint-fix-me github.com/rhinodavid/eslint-fix-me`;
+        const disableStart = `/* eslint-disable ${ruleIds.join(",")} */`;
+        const disableEnd = `/* eslint-enable ${ruleIds.join(",")} */`;
 
         const lineIndex = lineNumber - 1;
         const line = lines[lineIndex];
-        lines[lineIndex] = `${commentLine0}${os.EOL}${commentLine1}${os.EOL}${line}`
+        lines[
+          lineIndex
+        ] = `${comment}${os.EOL}${disableStart}${os.EOL}${line}${os.EOL}${disableEnd}`;
       });
       const updatedFile = lines.join(os.EOL);
       fs.writeFileSync(filePath, updatedFile);
