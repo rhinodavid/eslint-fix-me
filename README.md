@@ -34,6 +34,8 @@ With [`yarn`](https://yarnpkg.com/cli/dlx):
 yarn dlx eslint-fix-me .
 ```
 
+The CLI takes one argument, `[file|dir|glob]*`, which is passed through to ESLint. See the [ESLint CLI docs](https://eslint.org/docs/latest/use/command-line-interface#run-the-cli) for more information.
+
 ## Why would I want this?
 
 If you're migrating a codebase to ESLint from a legacy linter like [TSLint](https://palantir.github.io/tslint/),
