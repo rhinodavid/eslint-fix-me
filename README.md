@@ -17,6 +17,23 @@ Delete the comment and the related `eslint-disable`
 
 Run ESLint or an ESLint plugin to diagnose the problem and _fix it_.
 
+## Usage
+
+With [`npx`](https://www.npmjs.com/package/npx):
+```sh
+npx eslint-fix-me .
+```
+
+With [`pnpm`](https://pnpm.io/cli/dlx):
+```sh
+pnpm dlx eslint-fix-me .
+```
+
+With [`yarn`](https://yarnpkg.com/cli/dlx):
+```sh
+yarn dlx eslint-fix-me .
+```
+
 ## Why would I want this?
 
 If you're migrating a codebase to ESLint from a legacy linter like [TSLint](https://palantir.github.io/tslint/),
