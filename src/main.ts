@@ -9,7 +9,7 @@ program
   .version("1.0.0")
   .description("Supress all your eslint problems")
   .command('[files]')
-  .usage("[files]")
+  .usage("[file|dir|glob]*")
   .action((_, {args: files})=> lint(files))
   .parse(process.argv);
 
